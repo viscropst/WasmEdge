@@ -22,7 +22,7 @@ class HostFuncExampleAddStudent
 public:
   HostFuncExampleAddStudent(HostFuncExampleEnvironment &HostEnv)
       : HostFuncExample(HostEnv) {}
-  Expect<uint32_t> body(Runtime::Instance::MemoryInstance *MemInst,
+  Expect<size_t> body(Runtime::Instance::MemoryInstance *MemInst,
                         uint32_t StudentPtr, uint32_t StudentLen);
 };
 

@@ -12,7 +12,7 @@ Expect<void> HostFuncExampleSetClassID::body(
   return {};
 }
 
-Expect<uint32_t>
+Expect<size_t>
 HostFuncExampleAddStudent::body(Runtime::Instance::MemoryInstance *MemInst,
                                 uint32_t StudentPtr, uint32_t StudentLen) {
   // Check memory instance from module.
@@ -43,8 +43,8 @@ HostFuncExampleSetClassName::body(Runtime::Instance::MemoryInstance *MemInst,
   return {};
 }
 
-Expect<void> HostFuncExamplePrint::body([
-    [maybe_unused]] Runtime::Instance::MemoryInstance *MemInst) {
+Expect<void> HostFuncExamplePrint::body(
+    [[maybe_unused]] Runtime::Instance::MemoryInstance *MemInst) {
   std::cout << "Class ID: " << Env.ClassID << std::endl;
   std::cout << "Class Name: " << Env.ClassName << std::endl;
   for (auto &Student : Env.Students) {
