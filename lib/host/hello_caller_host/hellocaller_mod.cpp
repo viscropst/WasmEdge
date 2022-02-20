@@ -3,7 +3,8 @@
 
 namespace HelloCaller {
   namespace Host {
-HelloCallerMod::HelloCallerMod()::ImportObject("hellocaller_host") {
+HelloCallerMod::HelloCallerMod()
+  :ImportObject("hellocaller_host") {
     addHostFunc("c_host_prompt", std::make_unique<HostPrompt>());
   }
 }

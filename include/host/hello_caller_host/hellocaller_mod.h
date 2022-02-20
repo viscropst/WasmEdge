@@ -10,8 +10,6 @@ namespace Host {
  class HelloCallerMod : public WasmEdge::Runtime::ImportObject {
 public:
    HelloCallerMod();
-
- private:
 };
 
 }
